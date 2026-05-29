@@ -1,0 +1,493 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Muhammad Hassan Farid — AI Researcher &amp; Engineer</title>
+<meta name="description" content="AI Researcher &amp; Engineer specializing in Computer Vision, NLP, and Generative AI. Peer-reviewed publications and scalable AI systems in production. Based in Islamabad, Pakistan." />
+<meta name="author" content="Muhammad Hassan Farid" />
+<meta name="theme-color" content="#0A0A0B" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Muhammad Hassan Farid — AI Researcher &amp; Engineer" />
+<meta property="og:description" content="Turning research into reliable AI products. Computer Vision · NLP · Generative AI · LLMs · RAG · Agentic AI." />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Muhammad Hassan Farid — AI Researcher &amp; Engineer" />
+<meta name="twitter:description" content="Turning research into reliable AI products. CV · NLP · GenAI · LLMs · RAG." />
+
+<!-- Favicon: inline SVG monogram MH -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A0A0B'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' fill='%23F59E0B' text-anchor='middle' font-style='italic'%3EMH%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- JSON-LD Person schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Muhammad Hassan Farid",
+  "jobTitle": "AI Researcher & Engineer",
+  "email": "mailto:muhammadhassanfarid04@gmail.com",
+  "telephone": "+92-334-7559713",
+  "address": { "@type": "PostalAddress", "addressLocality": "Islamabad", "addressCountry": "PK" },
+  "knowsAbout": ["Computer Vision", "Natural Language Processing", "Generative AI", "LLMs", "RAG", "Agentic AI"],
+  "knowsLanguage": ["Python", "C++", "SQL", "JavaScript"]
+}
+</script>
+
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+
+<script>
+  if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('motion');
+  }
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<!-- cursor -->
+<div class="cursor-ring" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header>
+<nav class="nav" id="nav" aria-label="Primary">
+  <a href="#hero" class="logo" aria-label="Muhammad Hassan Farid — home">
+    <span><b>M</b>H</span><span class="mono">Farid</span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#work"><span>01</span>Work</a>
+    <a href="#research"><span>02</span>Research</a>
+    <a href="#experience"><span>03</span>Experience</a>
+    <a href="#teaching"><span>04</span>Teaching</a>
+    <a href="#contact"><span>05</span>Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+    </button>
+    <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</nav>
+</header>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <button class="icon-btn mm-close" id="mmClose" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <a href="#work"><span>01</span>Work</a>
+  <a href="#research"><span>02</span>Research</a>
+  <a href="#experience"><span>03</span>Experience</a>
+  <a href="#teaching"><span>04</span>Teaching</a>
+  <a href="#contact"><span>05</span>Contact</a>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero" data-screen-label="Hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-meta">
+      <span class="avail-pill"><span class="dot"></span>Available for collaboration</span>
+      <span>Islamabad, PK</span>
+      <span>AI Researcher &amp; Engineer</span>
+    </div>
+    <h1 class="hero-name" aria-label="Muhammad Hassan Farid">
+      <span class="line"><span class="word" style="animation-delay:.05s">Muhammad</span></span>
+      <span class="line"><span class="word" style="animation-delay:.18s">Hassan</span> <span class="ital" style="animation-delay:.3s">Farid</span></span>
+    </h1>
+    <p class="hero-roleline">
+      <span class="static">A&nbsp;</span><span class="role-rotator" id="roleRotator" aria-live="polite"></span>
+    </p>
+    <p class="hero-tagline">
+      <strong>Turning research into reliable AI products.</strong> I work across the full model
+      lifecycle — from experimentation and peer-reviewed research to systems running in production
+      across Computer Vision, NLP, and Generative AI.
+    </p>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary magnetic">View selected work
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-ghost magnetic">Get in touch</a>
+    </div>
+  </div>
+  <figure class="hero-portrait" aria-hidden="false">
+    <img src="{% static 'images/portrait.png' %}" alt="Portrait of Muhammad Hassan Farid" width="720" height="1267" loading="eager" decoding="async" />
+  </figure>
+  <div class="scroll-cue"><span>Scroll</span><span class="bar"></span></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" data-screen-label="About">
+  <div class="wrap">
+    <span class="eyebrow reveal">About</span>
+    <div class="grid12 about-grid" style="margin-top:50px">
+      <div class="about-quote reveal">
+        <blockquote>
+          AI Researcher and Engineer with hands-on experience spanning the entire
+          model development lifecycle — <span class="hl">from research and experimentation
+          to production deployment.</span> I build systems that hold up outside the notebook:
+          measured, reproducible, and shipped.
+        </blockquote>
+        <div class="sig"><span class="rule"></span>Computer Vision · NLP · Generative AI · LLMs · RAG · Agentic AI</div>
+      </div>
+      <div class="stats reveal d1">
+        <div class="stat"><div class="num" data-count="2" data-suffix="">0</div><div class="label">Peer-reviewed publications</div></div>
+        <div class="stat"><div class="num" data-count="9" data-suffix="+">0</div><div class="label">Production AI projects</div></div>
+        <div class="stat"><div class="num" data-count="5" data-suffix="+">0</div><div class="label">Years of engineering</div></div>
+        <div class="stat"><div class="num" data-count="100" data-suffix="+">0</div><div class="label">Students mentored</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" data-screen-label="Experience">
+  <div class="wrap">
+    <span class="eyebrow reveal">Experience</span>
+    <h2 class="section-title reveal d1">A trail of <em>shipped</em> work</h2>
+    <div class="timeline" id="timeline">
+      <div class="tl-track"></div>
+      <div class="tl-fill" id="tlFill"></div>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-date">Apr 2026 — Present</div>
+        <h3 class="tl-role">Co-Founder &amp; Chief AI Officer</h3>
+        <div class="tl-company"><b>Tech Prime Pvt. Ltd.</b></div>
+        <p class="tl-summary">Setting the AI technical direction end-to-end — from research bets to production architecture — and building the team that ships them.</p>
+      </article>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-date">Mar 2026 — Present</div>
+        <h3 class="tl-role">Senior Computer Vision Developer</h3>
+        <div class="tl-company"><b>Visual Computing Technologies</b></div>
+        <p class="tl-summary">Leading vision systems for detection, segmentation, and real-time inference, with a focus on robustness under real-world data drift.</p>
+      </article>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-date">Feb 2025 — Feb 2026</div>
+        <h3 class="tl-role">Research &amp; Development Engineer</h3>
+        <div class="tl-company"><b>UTech Innovative Solutions</b> · Hong Kong</div>
+        <p class="tl-summary">Prototyped and hardened ML R&amp;D into deployable services, bridging the gap between experimental models and product reliability.</p>
+      </article>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-date">Nov 2024 — Present</div>
+        <h3 class="tl-role">Lab Engineer</h3>
+        <div class="tl-company"><b>Abasyn University Islamabad</b></div>
+        <p class="tl-summary">Running AI/ML labs for HEC-recognized programs — curriculum, infrastructure, and mentoring the next cohort of engineers.</p>
+      </article>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-date">May 2024 — Jun 2024</div>
+        <h3 class="tl-role">Data Scientist &amp; Analyst II</h3>
+        <div class="tl-company"><b>Prodigy InfoTech</b></div>
+        <p class="tl-summary">Delivered data analysis and modeling work across a focused intensive, turning raw datasets into decision-ready signal.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section id="research" data-screen-label="Research">
+  <div class="wrap">
+    <span class="eyebrow reveal">Research &amp; Publications</span>
+    <h2 class="section-title reveal d1">Peer-reviewed, <em>cited</em>, in print</h2>
+    <div class="pub-list">
+      <article class="pub reveal">
+        <div class="pub-idx">P—01</div>
+        <div>
+          <h3 class="pub-title">Enhancing Conventional CNNs with Compound Scaling for Brain Tumor Detection in MRI</h3>
+          <div class="pub-meta">
+            <span class="tag">ESMRMB 2025</span>
+            <span class="tag">Marseille, France</span>
+            <span class="tag doi">DOI 10.1007/s10334-025-01278-8</span>
+          </div>
+        </div>
+        <a class="pub-cta" href="https://doi.org/10.1007/s10334-025-01278-8" target="_blank" rel="noopener">Read paper
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+      <article class="pub reveal">
+        <div class="pub-idx">P—02</div>
+        <div>
+          <h3 class="pub-title">Human Capital and Well-Being Meter Based on Federated-Learning-Powered Sentiment Analysis</h3>
+          <div class="pub-meta">
+            <span class="tag">Intl. Journal of Social Sciences Bulletin</span>
+            <span class="tag">2026</span>
+            <span class="tag doi">DOI 10.5281/zenodo.18513303</span>
+          </div>
+        </div>
+        <a class="pub-cta" href="https://doi.org/10.5281/zenodo.18513303" target="_blank" rel="noopener">Read paper
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK / BENTO ============ -->
+<section id="work" data-screen-label="Work">
+  <div class="wrap">
+    <span class="eyebrow reveal">Featured Work</span>
+    <h2 class="section-title reveal d1">Things I've <em>built</em> &amp; shipped</h2>
+    <div class="bento">
+
+      <article class="card tilt feature span-3 tall reveal">
+        <a class="card-link magnetic" href="https://github.com/" target="_blank" rel="noopener" aria-label="View Medi on GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <span class="glow"></span>
+        <div class="card-inner">
+          <div class="card-thumb"><svg viewBox="0 0 300 170" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="gRag" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1407"/><stop offset="1" stop-color="#0d0d10"/></linearGradient></defs><rect width="300" height="170" fill="url(#gRag)"/><g fill="none" stroke="#F59E0B" stroke-width="1.2" opacity=".85"><circle cx="150" cy="85" r="22"/><circle cx="70" cy="50" r="9"/><circle cx="80" cy="120" r="7"/><circle cx="230" cy="55" r="11"/><circle cx="225" cy="118" r="8"/><path d="M92 56l40 22M88 116l43 -20M172 76l46 -16M171 95l46 18"/></g><g fill="#F59E0B" opacity=".5"><circle cx="150" cy="85" r="3"/><circle cx="70" cy="50" r="2.5"/><circle cx="230" cy="55" r="2.5"/></g><text x="150" y="90" font-family="monospace" font-size="9" fill="#EDE9E2" text-anchor="middle" opacity=".7">RAG</text></svg></div>
+          <div class="card-cat">Generative AI · RAG</div>
+          <h3 class="card-title">Medi — AI Healthcare Chatbot</h3>
+          <p class="card-desc">RAG over a curated medical knowledge base with LangChain + Pinecone, containerized with Docker and deployed on AWS EC2.</p>
+          <div class="card-tags"><span>LLMs</span><span>LangChain</span><span>Pinecone</span><span>Flask</span><span>AWS</span><span>Docker</span></div>
+        </div>
+      </article>
+
+      <article class="card tilt span-3 reveal d1">
+        <a class="card-link magnetic" href="https://github.com/" target="_blank" rel="noopener" aria-label="View Lung Tumor Segmentation on GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <span class="glow"></span>
+        <div class="card-inner">
+          <div class="card-thumb"><svg viewBox="0 0 300 120" preserveAspectRatio="xMidYMid slice"><rect width="300" height="120" fill="#0d0d10"/><g opacity=".16" stroke="#EDE9E2" stroke-width=".5"><path d="M50 0v120M100 0v120M150 0v120M200 0v120M250 0v120M0 30h300M0 60h300M0 90h300"/></g><path d="M120 38c34-10 60 6 58 30s-30 38-56 28-34-48-2-58z" fill="#F59E0B" opacity=".22" stroke="#F59E0B" stroke-width="1.2" stroke-dasharray="4 3"/><circle cx="150" cy="62" r="5" fill="#F59E0B"/></svg></div>
+          <div class="card-cat">Medical Imaging</div>
+          <h3 class="card-title">Lung Tumor Segmentation</h3>
+          <p class="card-desc">Pixel-level U-Net segmentation on CT scans with heavy augmentation and class-imbalance handling.</p>
+          <div class="card-tags"><span>PyTorch</span><span>U-Net</span><span>OpenCV</span></div>
+        </div>
+      </article>
+
+      <article class="card tilt span-3 reveal">
+        <a class="card-link magnetic" href="https://doi.org/10.1007/s10334-025-01278-8" target="_blank" rel="noopener" aria-label="View Brain Tumor Detection paper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <span class="glow"></span>
+        <div class="card-inner">
+          <div class="card-thumb"><svg viewBox="0 0 300 120" preserveAspectRatio="xMidYMid slice"><rect width="300" height="120" fill="#0d0d10"/><g fill="none" stroke="#F59E0B" opacity=".8"><rect x="40" y="35" width="50" height="50" rx="4" stroke-width="1.2"/><rect x="110" y="42" width="38" height="38" rx="4" stroke-width="1.2" opacity=".7"/><rect x="166" y="48" width="26" height="26" rx="4" stroke-width="1.2" opacity=".55"/><path d="M210 60h46M232 50v20" stroke-width="1"/></g><circle cx="262" cy="60" r="6" fill="#F59E0B"/></svg></div>
+          <div class="card-cat">Published Research</div>
+          <h3 class="card-title">Brain Tumor Detection</h3>
+          <p class="card-desc">Compound-scaled CNNs for MRI classification — presented at ESMRMB 2025.</p>
+          <div class="card-tags"><span>Deep Learning</span><span>CNN</span><span>MRI</span></div>
+        </div>
+      </article>
+
+      <article class="card tilt span-3 reveal d1">
+        <a class="card-link magnetic" href="https://github.com/" target="_blank" rel="noopener" aria-label="View BERT NER on GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <span class="glow"></span>
+        <div class="card-inner">
+          <div class="card-thumb"><svg viewBox="0 0 300 120" preserveAspectRatio="xMidYMid slice"><rect width="300" height="120" fill="#0d0d10"/><g font-family="monospace" font-size="11" fill="#EDE9E2" opacity=".55"><text x="24" y="55">[ B-PER</text><text x="110" y="55" fill="#F59E0B" opacity="1">I-ORG</text><text x="185" y="55">O</text><text x="210" y="55" fill="#F59E0B" opacity="1">B-LOC ]</text></g><g stroke="#F59E0B" opacity=".4"><path d="M30 70h240" stroke-dasharray="2 4"/></g></svg></div>
+          <div class="card-cat">NLP</div>
+          <h3 class="card-title">Fine-Tuned BERT for NER</h3>
+          <p class="card-desc">Transformer fine-tuning on CoNLL-2003 across multiple entity types.</p>
+          <div class="card-tags"><span>Hugging Face</span><span>BERT</span><span>PyTorch</span></div>
+        </div>
+      </article>
+
+      <article class="card tilt span-2 reveal">
+        <a class="card-link magnetic" href="https://github.com/" target="_blank" rel="noopener" aria-label="View YOLOv8 project on GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <span class="glow"></span>
+        <div class="card-inner">
+          <div class="card-thumb"><svg viewBox="0 0 300 120" preserveAspectRatio="xMidYMid slice"><rect width="300" height="120" fill="#0d0d10"/><g fill="none" stroke="#F59E0B" stroke-width="1.4"><rect x="40" y="30" width="70" height="55" rx="2"/><rect x="150" y="50" width="45" height="40" rx="2" opacity=".7"/><rect x="215" y="38" width="40" height="35" rx="2" opacity=".55"/></g><g font-family="monospace" font-size="7" fill="#0d0d10"><rect x="40" y="22" width="34" height="9" fill="#F59E0B"/><text x="43" y="29">0.94</text></g></svg></div>
+          <div class="card-cat">Computer Vision</div>
+          <h3 class="card-title">YOLOv8 Recycling Plant</h3>
+          <p class="card-desc">Real-time waste classification for industrial recycling automation.</p>
+          <div class="card-tags"><span>YOLOv8</span><span>Edge</span></div>
+        </div>
+      </article>
+
+      <article class="card tilt span-2 reveal d1">
+        <a class="card-link magnetic" href="https://github.com/" target="_blank" rel="noopener" aria-label="View MelanoDetect on GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <span class="glow"></span>
+        <div class="card-inner">
+          <div class="card-thumb"><svg viewBox="0 0 300 120" preserveAspectRatio="xMidYMid slice"><rect width="300" height="120" fill="#0d0d10"/><g fill="none" stroke="#F59E0B"><circle cx="150" cy="60" r="38" opacity=".25" stroke-width="1"/><circle cx="150" cy="60" r="26" opacity=".5" stroke-width="1.1"/><circle cx="150" cy="60" r="14" opacity=".85" stroke-width="1.3"/></g><circle cx="150" cy="60" r="4" fill="#F59E0B"/></svg></div>
+          <div class="card-cat">Medical Imaging</div>
+          <h3 class="card-title">MelanoDetect AI</h3>
+          <p class="card-desc">Multi-class skin cancer diagnostic with mobile integration.</p>
+          <div class="card-tags"><span>CNN</span><span>Mobile</span></div>
+        </div>
+      </article>
+
+      <article class="card tilt span-2 reveal d2">
+        <a class="card-link magnetic" href="https://github.com/" target="_blank" rel="noopener" aria-label="View Intrusion Detection on GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <span class="glow"></span>
+        <div class="card-inner">
+          <div class="card-thumb"><svg viewBox="0 0 300 120" preserveAspectRatio="xMidYMid slice"><rect width="300" height="120" fill="#0d0d10"/><path d="M150 24l34 12v24c0 22-16 32-34 40-18-8-34-18-34-40V36z" fill="none" stroke="#F59E0B" stroke-width="1.3" opacity=".8"/><path d="M138 60l9 9 18-19" fill="none" stroke="#F59E0B" stroke-width="1.6"/></svg></div>
+          <div class="card-cat">Cybersecurity</div>
+          <h3 class="card-title">Intrusion Detection System</h3>
+          <p class="card-desc">Deep-learning IDS with a reduced false-positive rate on malicious traffic.</p>
+          <div class="card-tags"><span>Deep Learning</span><span>Security</span></div>
+        </div>
+      </article>
+
+      <article class="card tilt span-3 reveal">
+        <a class="card-link magnetic" href="https://github.com/" target="_blank" rel="noopener" aria-label="View Posture Tracking on GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <span class="glow"></span>
+        <div class="card-inner">
+          <div class="card-thumb"><svg viewBox="0 0 300 120" preserveAspectRatio="xMidYMid slice"><rect width="300" height="120" fill="#0d0d10"/><g stroke="#F59E0B" stroke-width="1.4" fill="#F59E0B"><circle cx="150" cy="30" r="6" opacity=".9"/><path d="M150 36v34M150 50l-28 12M150 50l30 10M150 70l-20 30M150 70l22 28" fill="none" opacity=".8"/><circle cx="122" cy="62" r="3"/><circle cx="180" cy="60" r="3"/><circle cx="130" cy="100" r="3"/><circle cx="172" cy="98" r="3"/></g></svg></div>
+          <div class="card-cat">Computer Vision</div>
+          <h3 class="card-title">Posture Tracking · MediaPipe</h3>
+          <p class="card-desc">Real-time spine and joint-angle monitoring exposed through Django REST APIs.</p>
+          <div class="card-tags"><span>MediaPipe</span><span>DRF</span><span>OpenCV</span></div>
+        </div>
+      </article>
+
+    </div>
+    <div class="work-all">
+      <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-ghost magnetic">View all on GitHub
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" data-screen-label="Skills">
+  <div class="wrap">
+    <span class="eyebrow reveal">Toolkit</span>
+    <h2 class="section-title reveal d1">The stack behind the <em>work</em></h2>
+    <div class="skill-groups">
+      <div class="reveal"><div class="sg-head"><i class="i">/</i>Languages</div><div class="chips"><span class="chip">Python</span><span class="chip">C++</span><span class="chip">SQL</span><span class="chip">JavaScript</span></div></div>
+      <div class="reveal d1"><div class="sg-head"><i class="i">/</i>ML &amp; Deep Learning</div><div class="chips"><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Scikit-Learn</span><span class="chip">Hugging Face</span></div></div>
+      <div class="reveal"><div class="sg-head"><i class="i">/</i>Computer Vision</div><div class="chips"><span class="chip">OpenCV</span><span class="chip">U-Net</span><span class="chip">YOLOv8</span><span class="chip">MediaPipe</span><span class="chip">Segmentation</span></div></div>
+      <div class="reveal d1"><div class="sg-head"><i class="i">/</i>NLP &amp; LLMs</div><div class="chips"><span class="chip">Transformers</span><span class="chip">BERT</span><span class="chip">LangChain</span><span class="chip">RAG</span><span class="chip">Agentic AI</span></div></div>
+      <div class="reveal"><div class="sg-head"><i class="i">/</i>MLOps &amp; Deployment</div><div class="chips"><span class="chip">Docker</span><span class="chip">MLflow</span><span class="chip">Flask</span><span class="chip">Django</span></div></div>
+      <div class="reveal d1"><div class="sg-head"><i class="i">/</i>Data &amp; Tools</div><div class="chips"><span class="chip">Pinecone</span><span class="chip">SQL</span><span class="chip">Git</span><span class="chip">Linux</span><span class="chip">NumPy</span><span class="chip">Pandas</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEACHING ============ -->
+<section class="teach" id="teaching" data-screen-label="Teaching">
+  <div class="wrap">
+    <div class="grid12 teach-grid">
+      <div class="teach-lead reveal">
+        <span class="eyebrow">Teaching &amp; Community</span>
+        <p style="margin-top:22px">Research only matters if it <em>travels.</em> I spend real time turning what I learn into something other people can build on.</p>
+      </div>
+      <div class="teach-items reveal d1">
+        <div class="teach-row"><div class="yr">2024—</div><div><h4>Lab Engineer · Abasyn University Islamabad</h4><p>Running AI/ML labs for HEC-recognized programs.</p></div></div>
+        <div class="teach-row"><div class="yr">Ongoing</div><div><h4>Free Virtual Educational Community</h4><p>Teaching AI &amp; ML fundamentals to students at no cost.</p></div></div>
+        <div class="teach-row"><div class="yr">2023</div><div><h4>IEEE Islamabad CIS — Industry Gala</h4><p>Organizer, connecting students with the AI industry.</p></div></div>
+        <div class="teach-row"><div class="yr">Jan 2026</div><div><h4>Innovate Pakistan × DevQuest</h4><p>Recognized for contributions to applied AI.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HONORS ============ -->
+<section id="honors" data-screen-label="Honors">
+  <div class="wrap">
+    <span class="eyebrow reveal">Honors &amp; Certifications</span>
+    <div class="grid12 honors-grid">
+      <div class="honors-col reveal">
+        <h3>Awards &amp; Recognition</h3>
+        <div class="hrow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 22l5-3 5 3-1.5-9.5"/></svg></span><div><h4>Innovate Pakistan × DevQuest</h4><p>Applied-AI recognition · Jan 2026</p></div></div>
+        <div class="hrow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 5 5.6.8-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.8z"/></svg></span><div><h4>IEEE Islamabad CIS Industry Gala</h4><p>Lead organizer · 2023</p></div></div>
+        <div class="hrow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V5M4 16l5-3 4 2 7-5"/></svg></span><div><h4>Two peer-reviewed publications</h4><p>ESMRMB 2025 · IJSSB 2026</p></div></div>
+      </div>
+      <div class="honors-col reveal d1">
+        <h3>Certifications</h3>
+        <div class="hrow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/></svg></span><div><h4>OpenCV Bootcamp — Grade: 100%</h4><p>OpenCV University · Jan 2026</p></div></div>
+        <div class="hrow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><h4>Introduction to Prompt Engineering</h4><p>SimpliLearn SkillUP · May 2025</p></div></div>
+        <div class="hrow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><div><h4>Python Essentials 1</h4><p>Cisco · Apr 2024</p></div></div>
+        <div class="hrow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span><div><h4>Python for Machine Learning</h4><p>Udemy · Sep 2023</p></div></div>
+        <div class="hrow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><div><h4>Data Analysis Using Python</h4><p>10Pearls University · May 2023</p></div></div>
+        <div class="hrow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span><div><h4>SQL (Intermediate) Certified</h4><p>HackerRank · May 2023</p></div></div>
+        <div class="hrow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span><div><h4>Professional Google Data Analytics</h4><p>Coursera – Google · 2022 – 2023</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact" data-screen-label="Contact">
+  <div id="contact-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2 class="contact-head reveal">Let's build <em>something</em> that ships.</h2>
+    <div class="grid12 contact-grid">
+      <form class="contact-form reveal d1" id="contactForm" novalidate>
+        {% csrf_token %}
+        <div class="field" id="f-name">
+          <label for="in-name">Name</label>
+          <input id="in-name" name="name" type="text" autocomplete="name" placeholder="Your name" />
+          <span class="err">Please enter your name.</span>
+        </div>
+        <div class="field" id="f-email">
+          <label for="in-email">Email</label>
+          <input id="in-email" name="email" type="email" autocomplete="email" placeholder="you@domain.com" />
+          <span class="err">Enter a valid email address.</span>
+        </div>
+        <div class="field" id="f-msg">
+          <label for="in-msg">Message</label>
+          <textarea id="in-msg" name="message" rows="4" placeholder="What are you building?"></textarea>
+          <span class="err">Tell me a little about it.</span>
+        </div>
+        <button type="submit" class="btn btn-primary magnetic" style="align-self:flex-start">Send message
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+        </button>
+      </form>
+      <aside class="contact-aside reveal d2">
+        <div class="ci"><div class="k">Email</div><a class="v" href="mailto:muhammadhassanfarid04@gmail.com">muhammadhassanfarid04@gmail.com</a></div>
+        <div class="ci"><div class="k">Phone</div><a class="v" href="tel:+923347559713">+92 334 7559713</a></div>
+        <div class="ci"><div class="k">Based in</div><span class="v">Islamabad, Pakistan</span></div>
+        <div class="socials">
+          <a class="icon-btn magnetic" href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.2 2.3-2.5 4.73-2.5 5.06 0 6 3.3 6 7.6V24h-5v-7.1c0-1.7 0-3.9-2.4-3.9s-2.7 1.8-2.7 3.8V24H8z"/></svg></a>
+          <a class="icon-btn magnetic" href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.4.5 0 5.9 0 12.6c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5 18.3 5.3 18.3 5.3c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 24 12.6C24 5.9 18.6.5 12 .5z"/></svg></a>
+          <a class="icon-btn magnetic" href="https://orcid.org/" target="_blank" rel="noopener" aria-label="ORCID"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM7.5 17.6H5.9V8.1h1.6v9.5zM6.7 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm11 10.6h-3.6c-3 0-4.6-1.9-4.6-4.7 0-3.1 2-4.8 4.8-4.8h3.4v1.5h-3.3c-2.2 0-3.2 1.4-3.2 3.3 0 2 1.3 3.2 3.2 3.2h1.8V9.6h1.5v8z"/></svg></a>
+          <a class="icon-btn magnetic" href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 9l11 7 9-5.7V16h2V9zM5 14.5V18c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.5l-7 4.5z"/></svg></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <a href="#hero" class="logo"><span><b>M</b>H</span><span class="mono">Farid</span></a>
+    <div class="footer-meta">
+      &copy; 2026 Muhammad Hassan Farid — All rights reserved.<br />
+      Designed &amp; built by Muhammad Hassan Farid · Islamabad, PK
+    </div>
+  </div>
+</footer>
+
+<button class="icon-btn to-top" id="toTop" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<!-- toast -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+  <span>Message sent — I'll be in touch soon.</span>
+</div>
+
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
