@@ -36,7 +36,7 @@
 
   /* ---------- ACTIVE NAV (IntersectionObserver) ---------- */
   var navMap = {}; $$('.nav-links a').forEach(function(a){ navMap[a.getAttribute('href').slice(1)] = a; });
-  var idToWatch = ['work','research','experience','teaching','contact'];
+  var idToWatch = ['work','research','experience','services','teaching','contact'];
   var secObserver = new IntersectionObserver(function(entries){
     entries.forEach(function(en){
       if (en.isIntersecting){
