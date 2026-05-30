@@ -279,4 +279,64 @@
     initObs.observe(hero);
   })();
 
+  /* ---------- CURSOR RIPPLE ---------- */
+  (function(){
+    var canvas = document.getElementById('ripple-canvas'); if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W = 0, H = 0, rings = [];
+
+    function resize(){
+      W = window.innerWidth; H = window.innerHeight;
+      canvas.width = W * dpr; canvas.height = H * dpr;
+      canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function hexRgb(hex){
+      hex = hex.replace('#',''); if (hex.length===3) hex=hex.split('').map(function(c){return c+c;}).join('');
+      var n=parseInt(hex,16); return [(n>>16)&255,(n>>8)&255,n&255];
+    }
+
+    function spawnRing(x, y){
+      var rgb = hexRgb(getComputedStyle(root).getPropertyValue('--accent').trim() || '#F59E0B');
+      rings.push({ x:x, y:y, r:0, maxR:40+Math.random()*70, alpha:0.55, speed:1.4+Math.random()*1.6, rgb:rgb });
+    }
+
+    var lastX = -1, lastY = -1;
+    document.addEventListener('mousemove', function(e){
+      var dx = e.clientX - lastX, dy = e.clientY - lastY;
+      if (dx*dx + dy*dy < 400) return;
+      lastX = e.clientX; lastY = e.clientY;
+      spawnRing(e.clientX, e.clientY);
+    }, { passive:true });
+
+    document.addEventListener('touchmove', function(e){
+      for (var i=0;i<e.touches.length;i++) spawnRing(e.touches[i].clientX, e.touches[i].clientY);
+    }, { passive:true });
+
+    document.addEventListener('click', function(e){
+      for (var i=0;i<3;i++) rings.push({ x:e.clientX, y:e.clientY, r:i*12, maxR:80+i*30, alpha:0.6, speed:1.8, rgb:hexRgb(getComputedStyle(root).getPropertyValue('--accent').trim()||'#F59E0B') });
+    });
+
+    (function loop(){
+      ctx.clearRect(0,0,W,H);
+      for (var i=rings.length-1;i>=0;i--){
+        var rg=rings[i];
+        rg.r += rg.speed;
+        rg.alpha = 0.55*(1-rg.r/rg.maxR);
+        if (rg.r >= rg.maxR){ rings.splice(i,1); continue; }
+        ctx.beginPath();
+        ctx.arc(rg.x,rg.y,rg.r,0,Math.PI*2);
+        ctx.strokeStyle='rgba('+rg.rgb[0]+','+rg.rgb[1]+','+rg.rgb[2]+','+rg.alpha+')';
+        ctx.lineWidth=1.4;
+        ctx.stroke();
+      }
+      requestAnimationFrame(loop);
+    })();
+
+    window.addEventListener('resize', resize);
+    resize();
+  })();
+
 })();
